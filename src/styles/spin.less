@@ -1,0 +1,17 @@
+.yz-spin {
+  display: inline-flex;
+  &-icon {
+    animation: ani-yz-spin 1s linear infinite;
+  }
+  @keyframes ani-yz-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

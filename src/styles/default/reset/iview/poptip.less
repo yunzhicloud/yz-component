@@ -1,0 +1,30 @@
+@import "../../../common/var";
+
+.ivu-poptip{
+
+  .ivu-poptip-inner{
+    border: 1px solid @primary-color;
+    box-shadow: @shadow-base;
+  }
+  .ivu-poptip-popper[x-placement^="top"]{
+    .ivu-poptip-arrow:after{
+      border-top-color: @primary-color;
+    }
+  }
+  .ivu-poptip-popper[x-placement^="bottom"]{
+    .ivu-poptip-arrow:after{
+      border-bottom-color: @primary-color;
+    }
+  }
+  .ivu-poptip-popper[x-placement^="left"]{
+    .ivu-poptip-arrow:after{
+      border-left-color: @primary-color;
+    }
+  }
+  .ivu-poptip-popper[x-placement^="right"]{
+    .ivu-poptip-arrow:after{
+      border-right-color: @primary-color;
+    }
+  }
+}
+

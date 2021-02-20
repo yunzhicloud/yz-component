@@ -1,0 +1,112 @@
+@import "./mixins/utils";
+
+
+.yz-search{
+  min-height: 36px;
+  border-radius: 18px;
+  background-color: #eff4f9;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 3px 8px 0 8px;
+  position: relative;
+  border: solid 1px transparent;
+  display: flex;
+  align-items: center;
+  &:hover{
+    border: solid 1px #d5dee7;
+  }
+
+  &-foucs{
+    background-color: #e3e9ef;
+    border: 1px solid #d8dee5;
+  }
+
+  .yz-search-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    .utils-user-select(none);
+  }
+
+  .search-input-area{
+    width: 20px;
+    height: 32px;
+    flex-grow: 1;
+    .utils-flex-center;
+    input{
+      color: #000000;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      caret-color: #0fbb7f;
+    }
+  }
+  .drop{
+    width: 1px;
+    margin-left: -1px;
+    height: 28px;
+    .drop-menu{
+      margin-left: 120px;
+      margin-top: 25px;
+      .ivu-select-dropdown{
+        background-color: #242e42;
+        color: #fff;
+        padding: 0;
+        min-width: 208px;
+      }
+      .ivu-dropdown-item{
+        color: #fff;
+        &:hover{
+          background-color: #24357d;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .tags-area{
+    max-width:~"calc(100% - 160px)";
+  }
+  .fill-tags{
+    float: left;
+    margin-bottom: 3px;
+    height: 28px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #24357d;
+    padding: 0 10px;
+    border-radius: 290486px;
+    .utils-flex-center;
+    margin-right: 10px;
+    img{
+      margin-left: 8px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .edit-tags{
+    height: 28px;
+    font-size: 12px;
+    padding: 0 0 0 10px ;
+    border-radius: 290486px;
+    color: #000000;
+    .utils-flex-center;
+  }
+
+  .search-clear{
+    width: 56px;
+    height: 28px;
+    margin-right: -4px;
+    padding: 6px 20px;
+    border-radius: 28px;
+    background-color: #eff4f9;
+    .utils-flex-center;
+    img{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

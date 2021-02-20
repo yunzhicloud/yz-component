@@ -1,0 +1,53 @@
+{
+  "name": "@yunzhicloud/components-lib",
+  "version": "1.0.25",
+  "description": "A Component Library for Vue.js.",
+  "keywords": [
+    "yz"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "core-js": "^2.6.11",
+    "dog-names": "^1.0.2",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "view-design": "^4.0.2"
+  },
+  "peerDependencies": {
+    "view-design": "^4.0.2"
+  },
+  "scripts": {
+    "pub": "npm config set registry https://registry.npmjs.org && npm version patch && npm publish --access=public",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build",
+    "docs": "concurrently \"vue-docgen --watch\" \"vuepress dev docs\"",
+    "docs:build": "vue-docgen && vuepress build docs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.1",
+    "css-loader": "^2.1.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^0.19.0",
+    "url-loader": "^1.1.2",
+    "vue-docgen-cli": "^3.20.0",
+    "vue-loader": "^15.2.4",
+    "vue-styleguidist": "^4.2.3",
+    "vuepress": "^1.0.3",
+    "webpack": "^4.10.0",
+    "webpack-bundle-analyzer": "3.3.2"
+  },
+  "browserslist": [
+    "ie 11"
+  ]
+}

@@ -1,0 +1,53 @@
+@import "./common/var";
+
+.yz-card {
+  position: relative;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  .yz-card-title{
+    position: relative;
+    height: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.43;
+    zoom: 1;
+    color: @primary-color;
+    &:before{
+      content: ".";
+      display: block;
+      clear: both;
+      overflow: hidden;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+  &-big {
+    box-shadow: 0 4px 8px 0 rgba(36, 46, 66, 0.06);
+    &:hover {
+      box-shadow: 0 6px 16px 0 rgba(33, 43, 54, 0.2);
+    }
+  }
+  &-active {
+    background-color: #f9fbfd;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(36, 46, 66, 0.08);
+    }
+  }
+  &-disabled {
+    background-color: #f9fbfd;
+  }
+  &-animation {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+    &:hover {
+      transform: translateY(-4px);
+      border-color: #79879c;
+      box-shadow: 0 4px 8px 0 rgba(36, 46, 66, 0.2);
+    }
+  }
+}

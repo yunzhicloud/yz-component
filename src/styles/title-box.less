@@ -1,0 +1,111 @@
+.yz-title-box {
+  &-dark {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px 0 rgba(36, 46, 66, 0.06);
+    &-leftIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 188px;
+    }
+
+    &-rightIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+    }
+    &-content {
+      position: relative;
+      padding: 30px 40px;
+      color: #fff;
+      overflow: hidden;
+      background-color: @primary-color;
+      &-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-shadow: 0 4px 8px rgba(36, 46, 66, 0.1);
+      }
+
+      & > p {
+        font-size: 12px;
+        color: #eff4f9;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &-gradient,
+  &-light {
+    position: relative;
+    margin-bottom: 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(36, 46, 66, 0.12),
+      0 4px 8px 0 rgba(125, 158, 224, 0.06);
+
+    overflow: hidden;
+    &-box {
+      padding: 24px 20px;
+      display: flex;
+      background-image: linear-gradient(108deg, #3023ae, #c86dd7);
+    }
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 52px;
+      height: 52px;
+      margin-right: 20px;
+      border-radius: 100px 0 100px 100px;
+      background-color: rgba(239, 244, 249, 0.08);
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &-rightIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+    }
+
+    &-content {
+      color: #fff;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 4px rgba(36, 46, 66, 0.1);
+      &-title {
+        line-height: 32px;
+        font-size: 24px;
+        font-weight: 600;
+        text-shadow: 0 4px 8px rgba(36, 46, 66, 0.1);
+        -webkit-font-smoothing: antialiased;
+      }
+      & > p {
+        font-size: 12px;
+      }
+    }
+  }
+  &-light {
+    box-shadow: 0 2px 4px 0 rgba(36, 46, 66, 0.12),
+      0 4px 8px 0 rgba(125, 158, 224, 0.06);
+    &-box {
+      background-image: linear-gradient(108deg, #fff, #fff);
+    }
+    &-icon {
+      background-color: #eff4f9;
+    }
+    &-content {
+      color: #79879c;
+      &-title {
+        color: @info-color;
+      }
+    }
+  }
+}

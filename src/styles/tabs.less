@@ -1,0 +1,130 @@
+@import "./mixins/utils";
+@import "./common/var";
+
+.yz-tabs{
+  box-sizing: border-box;
+
+  /**
+   *  Default 类型
+   */
+  &-default{
+    height: 48px;
+    display: inline-flex;
+    padding: 8px 14px;
+    background-color: #f9fbfd;
+    width: 100%;
+    .yz-tab-pane{
+      .utils-flex-center;
+      box-sizing: border-box;
+      height: 32px;
+      line-height: 32px;
+      position: relative;
+      margin: 0 6px;
+      font-size: 12px;
+      cursor: pointer;
+      min-width: 96px;
+      transition: all .3s;
+      border: 1px solid transparent;
+      color: #5f708a;
+      padding: 4px 16px;
+      &:hover{
+        color: @info-hover-color;
+      }
+      &-checked{
+        border-radius: 100px;
+        background-color: #eff4f9;
+        border: 1px solid #ccd3db;
+      }
+    }
+  }
+  /**
+   * Radio 类型
+   */
+  &-radio{
+    height: 32px;
+    display: inline-flex;
+    padding: 1px;
+    border-radius: 16px;
+    background-color: #f9fbfd;
+    border: 1px solid #c1c9d1;
+    .yz-tab-pane{
+      .utils-flex-center;
+      position: relative;
+      padding: 4px 24px;
+      border-radius: 16px;
+      font-size: 12px;
+      cursor: pointer;
+      &-checked{
+        background-color: @primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  /**
+   * Card 类型
+   */
+  &-card{
+    display: inline-flex;
+    height: 52px;
+    background-color: #eff4f9;
+    .yz-tab-pane{
+      .utils-flex-center;
+      position: relative;
+      padding: 4px 24px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      &:hover{
+        border-color: #d5dee7;
+        color: @info-hover-color;
+      }
+      &-checked{
+        background-color: #fff;
+        color: @primary-color;
+      }
+    }
+  }
+
+
+  /**
+  * Card 类型
+  */
+  &-underline{
+    display: inline-flex;
+    height: 50px;
+    padding: 0 14px;
+    border-radius: 4px;
+    background-color: @primary-color;
+    .utils-flex-left-center;
+    .yz-tab-pane{
+      .utils-flex-center;
+      box-sizing: border-box;
+      height: 32px;
+      position: relative;
+      padding: 4px 24px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #c9cee4;
+      transition: all .3s;
+      &:hover{
+        border-color: #d5dee7;
+        color: #fff;
+      }
+      &-checked{
+        color: #fff;
+        &:before{
+          content: " ";
+          position: absolute;
+          bottom: -1px;
+          left: calc(50% - 9px);
+          width: 18px;
+          height: 2px;
+          border-radius: 2px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

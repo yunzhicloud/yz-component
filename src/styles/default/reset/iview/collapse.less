@@ -1,0 +1,24 @@
+// IView-Collapse
+.ivu-collapse {
+  border-color: #e3e9ef;
+  &-item {
+    border-top: 1px solid #e3e9ef;
+  }
+  .ivu-collapse-item.ivu-collapse-item-active > .ivu-collapse-header {
+    border-color: #e3e9ef;
+  }
+  &-header {
+    color: @info-color;
+    font-weight: bold;
+  }
+  &-content-box {
+    color: #79879c;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &.ivu-collapse-simple
+    > .ivu-collapse-item.ivu-collapse-item-active
+    > .ivu-collapse-header {
+    border: none;
+  }
+}

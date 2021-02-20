@@ -1,0 +1,27 @@
+// IView-Slider
+.ivu-slider {
+  .ivu-tooltip-rel {
+    border-radius: 50%;
+    border: 1px solid @primary-color;
+    box-shadow: @primary-input-shadow;
+    .ivu-slider-button {
+      border: 1px solid #fff;
+      background-color: @primary-color;
+    }
+  }
+  &-button:focus,
+  &-button:hover,
+  &-button-dragging {
+    border-color: @primary-color;
+    transform: scale(1.2);
+  }
+  &.ivu-slider-disabled {
+    .ivu-tooltip-rel {
+      box-shadow: none;
+      border: 1px solid #ccc;
+      .ivu-slider-button {
+        background-color: #ccc;
+      }
+    }
+  }
+}

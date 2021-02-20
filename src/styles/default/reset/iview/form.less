@@ -1,0 +1,17 @@
+@import "../../../common/var";
+
+.ivu-form {
+  .ivu-form-item-error-tip {
+    color: @error-color;
+  }
+  // .ivu-form-item-error{
+  //   box-shadow: @error-input-shadow;
+  // }
+  .ivu-form-item-error .ivu-input-number-focused {
+    box-shadow: @error-input-shadow;
+  }
+  .ivu-form-item-error .ivu-input:focus,
+  .ivu-form-item-error .ivu-input:hover {
+    box-shadow: @error-input-shadow;
+  }
+}

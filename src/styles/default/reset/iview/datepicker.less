@@ -1,0 +1,18 @@
+// IView-TimePicker、IView-DatePicker
+.ivu-date-picker {
+  transition: all 0.3s ease-in-out;
+  .ivu-input:focus,
+  .ivu-input:hover {
+    box-shadow: @primary-input-shadow;
+  }
+  .ivu-time-picker-cells-cell-selected {
+    font-weight: bold;
+  }
+  &-cells-cell:hover em {
+    background: #f5f7fa;
+  }
+
+  &-cells-cell-selected:hover em {
+    background: @primary-color;
+  }
+}

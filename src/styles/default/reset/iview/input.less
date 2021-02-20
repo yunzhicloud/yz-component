@@ -1,0 +1,40 @@
+@import "../../../common/var";
+
+.ivu-input {
+  border-color: #b5c2c9;
+  color: @info-color;
+  caret-color: @info-color;
+  &:focus {
+    box-shadow: @primary-input-shadow;
+  }
+  &::placeholder {
+    font-weight: 400;
+  }
+}
+
+.ivu-input-wrapper {
+  .ivu-icon-ios-search {
+    left: 0;
+    & + i {
+      & + input {
+        padding-left: 40px;
+        opacity: 0.6;
+        border-radius: 18px;
+        border-color: transparent;
+        background-color: #eff4f9;
+        color: @info-color;
+        font-weight: 600;
+        box-shadow: none;
+        &:hover {
+          border-color: #abb4be !important;
+        }
+        &:focus {
+          background-color: #fff;
+          border-color: #79879c !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+}

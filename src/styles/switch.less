@@ -1,0 +1,88 @@
+.yz-switch{
+  border: 1px solid transparent;
+  background-color: #c1c9d1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #24357d;
+  padding: 5px 20px;
+  text-shadow: 0 2px 4px rgba(36,46,66,.1);
+  transition: all .3s ease-in-out;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  border-radius: 100px;
+  outline: none;
+  &-active{
+    background-color: #242e42;
+    color: #fff;
+  }
+  &-inactive{
+    &:hover{
+      background-color: #e3e9ef;
+      border-color: #c1c9d1;
+    }
+    &:active{
+      background-color: #abb4be;
+      border-color: #c1c9d1;
+      -webkit-box-shadow: inset 0 4px 8px 0 rgba(36,46,66,.12);
+      box-shadow: inset 0 4px 8px 0 rgba(36,46,66,.12);
+    }
+  }
+  .content{
+    height: 20px;
+    white-space: nowrap;
+    .switch{
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 17px;
+      line-height: 17px;
+      padding-right: 30px;
+      white-space: nowrap;
+      cursor: pointer;
+      .utils-user-select(none);
+      &:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        right: 0;
+        width: 24px;
+        height: 5.8px;
+        background: #fff;
+        border-radius: 100px;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        right: 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        -webkit-box-shadow: 0 1px 2px 0 rgba(33,42,51,.04), 0 1px 1px 0 rgba(33,42,51,.04);
+        box-shadow: 0 1px 2px 0 rgba(33,42,51,.04), 0 1px 1px 0 rgba(33,42,51,.04);
+        -webkit-transition: all .2s cubic-bezier(.78,.14,.15,.86);
+        -o-transition: all .2s cubic-bezier(.78,.14,.15,.86);
+        transition: all .2s cubic-bezier(.78,.14,.15,.86);
+      }
+    }
+    .switch-on{
+      &:after{
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../common/var";
+
+.ivu-tree>.ivu-tree-children>li>.ivu-tree-title{
+  color: @primary-color;
+  font-weight: 700;
+}
+
+.ivu-tree{
+  .ivu-tree-title{
+    font-weight: 400;
+    &:hover{
+      background: none;
+      color: @primary-color;
+      font-weight: 500;
+    }
+    color: @info-color;
+    &-selected{
+      background: none;
+      color: @primary-color;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "../../../common/var";
+
+.yz-table-warpper {
+  box-sizing: border-box;
+  padding: 0 12px 12px 12px;
+  background-color: #fff;
+}
+
+.ivu-table-wrapper {
+  background-color: #fff;
+  overflow: hidden;
+  color: @info-color;
+
+  .ivu-table {
+    font-size: 12px;
+
+    &:before {
+      width: 0;
+    }
+  }
+
+  .ivu-table-body {
+  }
+
+  table {
+    box-sizing: border-box;
+
+    tbody {
+      .ivu-table-row {
+        &-hover,
+        &-highlight {
+          background: #f9fbfd;
+
+          td {
+            background-color: #f9fbfd !important;
+            background: #f9fbfd;
+          }
+        }
+      }
+    }
+
+    th {
+      color: #79879c;
+      font-weight: 600;
+      background-color: unset;
+    }
+
+    td {
+      color: @info-color;
+
+      &:hover {
+        color: @info-hover-color;
+      }
+
+      &:nth-child(1) {
+        font-weight: 700;
+      }
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid #eff4f9;
+    }
+  }
+}
+/**
+ * 修复IView Table fix时框选线不存在的问题
+ */
+.ivu-table-fixed-body{
+  overflow: auto;
+  margin-top: -1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.yz-row-checked {
+  overflow-y: auto;
+
+  td {
+    position: relative;
+    background: #f9fbfd;
+
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1px;
+      content: "";
+      z-index: 2;
+    }
+
+    &::before {
+      top: -1px;
+      background: @primary-color;
+    }
+
+    &::after {
+      bottom: -1px;
+      background: @primary-color;
+    }
+
+    &:first-child {
+      border-left: 1px solid @primary-color;
+    }
+
+    &:last-child {
+      z-index: 999;
+      border-right: 1px solid @primary-color;
+    }
+  }
+
+  & + .yz-row-checked {
+    td {
+      &::before {
+        top: -1px;
+        background: #f9fbfd;
+      }
+
+      &::after {
+        bottom: -1px;
+        background: @primary-color;
+      }
+    }
+  }
+}

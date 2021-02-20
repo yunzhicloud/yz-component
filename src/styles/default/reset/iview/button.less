@@ -1,0 +1,72 @@
+// IView-Button
+.ivu-btn {
+  &.ivu-btn-large.ivu-btn-icon-only {
+    width: 40px;
+  }
+  &.ivu-btn-primary {
+    -webkit-box-shadow: @primary-btn-shadow;
+    box-shadow: @primary-btn-shadow;
+    &:hover,
+    &:focus {
+      background-color: @primary-color;
+    }
+  }
+
+  &.ivu-btn-info {
+    box-shadow: @info-btn-shadow;
+    &:hover,
+    &:focus {
+      background-color: @info-color;
+    }
+  }
+
+  &.ivu-btn-error {
+    box-shadow: @error-btn-shadow;
+    &:hover,
+    &:focus {
+      background-color: @error-color;
+    }
+  }
+
+  &.ivu-btn-default {
+    border: 1px solid #ccd3db;
+    background: #eff4f9;
+    text-shadow: 0 2px 4px rgba(36, 46, 66, 0.1);
+    &:hover,
+    &:focus {
+      background: #e3e9ef;
+      border-color: #c1c9d1;
+    }
+  }
+
+  &.ivu-btn-ghost {
+    background: transparent;
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+  }
+  &.ivu-btn-text {
+    &:hover,
+    &:focus {
+      background: #e3e9ef;
+    }
+  }
+  &.ivu-btn-default.ivu-btn-ghost {
+    &:hover,
+    &:focus {
+      border-color: @primary-color;
+    }
+  }
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
